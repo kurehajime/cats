@@ -7,9 +7,9 @@ Reads files,Output multi-column
 
 #### $ cats \<FILE\> \<FILE\> \<FILE\> ... 
 
-option:
-  -c int  :columns count (default 80)
-  -n	    :add filename
+option:  
+  -c int  :columns count (default 80)  
+  -n	    :add filename  
 
 example
 
