@@ -19,10 +19,13 @@ var (
 
 func main() {
 	var headFlag bool
-	flag.BoolVar(&headFlag, "h", false, "add filename")
+	flag.BoolVar(&headFlag, "n", false, "add filename")
 	flag.IntVar(&COL, "c", 80, "columns count")
 
 	flag.Parse()
+	if len(flag.Args())==0{
+		os.Exit(0)
+	}
 	texts, err := readFilesByArg(flag.Args(), headFlag)
 	if err != nil {
 		fmt.Errorf(err.Error())
